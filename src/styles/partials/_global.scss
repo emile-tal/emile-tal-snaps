@@ -1,6 +1,5 @@
-@use './typography';
-@use './variables' as *;
-@use './mixins' as *;
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
 
 *,
 *::after,
@@ -11,6 +10,5 @@
 }
 
 body {
-    font-family: "Outfit", Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }

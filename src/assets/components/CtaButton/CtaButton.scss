@@ -1,0 +1,21 @@
+@use '../../../styles/partials/variables' as *;
+@use '../../../styles/partials/mixins' as *;
+
+.cta-button {
+    background-color: transparent;
+    color: $primary-color2;
+    border: 2px solid $primary-color2;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 100vmax;
+
+    &__text {
+        @include labels-mobile;
+
+        @include tablet {
+            @include labels-desktop-tablet;
+        }
+    }
+}
