@@ -7,15 +7,17 @@
     border: 2px solid $primary-color2;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     border-radius: 100vmax;
+
+    @include tablet {
+        padding: 0.5rem 1.75rem;
+    }
 
     &__text {
         @include labels-mobile;
-
-        @include tablet {
-            @include labels-desktop-tablet;
-        }
+        color: $primary-color2
     }
 }

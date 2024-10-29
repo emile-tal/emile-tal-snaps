@@ -1,20 +1,16 @@
-@use '../../../styles/partials/variables.scss' as *;
 @use '../../../styles/partials/mixins.scss' as *;
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 $side-margin-mobile;
-    padding: 1.5rem 0;
+    padding: 1.25rem 0;
 
     @include tablet {
-        margin: 0 $side-margin-tablet;
         padding: 2rem 0;
     }
 
     @include desktop {
-        width: $desktop-container-width;
-        margin: 0 auto;
+        padding: 2rem 0 3.25rem;
     }
 }
