@@ -18,6 +18,7 @@
 
     &__text {
         @include labels-mobile;
+        font-size: 0.75rem;
         color: $primary-color2
     }
 }

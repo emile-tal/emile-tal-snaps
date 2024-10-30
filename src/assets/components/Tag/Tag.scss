@@ -1,0 +1,10 @@
+@use '../../../styles/partials/variables.scss' as *;
+@use '../../../styles/partials/mixins.scss' as *;
+
+.tag {
+    padding: 0.3rem 0.5rem;
+    background-color: $secondary-color3;
+    border: $secondary-color1 solid 1px;
+    border-radius: 8px;
+    @include labels-mobile;
+}
