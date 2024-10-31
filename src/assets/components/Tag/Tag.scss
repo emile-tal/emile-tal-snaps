@@ -7,4 +7,8 @@
     border: $secondary-color1 solid 1px;
     border-radius: 8px;
     @include labels-mobile;
+
+    @include tablet {
+        @include labels-desktop-tablet;
+    }
 }

@@ -3,9 +3,15 @@
 
 .gallery {
     margin: 0 $side-margin-mobile;
+    display: flex;
+    flex-direction: column;
 
     @include tablet {
         margin: 0 $side-margin-tablet;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 1rem 0;
     }
 
     @include desktop {
