@@ -12,11 +12,20 @@
     @include tablet {
         width: calc(50% - 0.75rem);
         margin: 0;
+        border-radius: 16px;
+    }
+
+    @include desktop {
+        width: 24.5rem;
     }
 
     &__image {
         width: 100%;
         border-radius: 8px 8px 0 0;
+
+        @include tablet {
+            border-radius: 16px 16px 0 0;
+        }
     }
 
     &__tag-container {
@@ -40,6 +49,12 @@
 
         @include tablet {
             @include labels-desktop-tablet;
+            bottom: 3.6rem;
+        }
+
+        @include desktop {
+            border-top-left-radius: 16px;
+            padding: 0.5rem 0.7rem;
         }
     }
 }
