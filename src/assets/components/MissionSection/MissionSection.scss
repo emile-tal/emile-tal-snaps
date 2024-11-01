@@ -2,10 +2,16 @@
 @use '../../../styles/partials/mixins.scss' as *;
 
 .mission {
+    margin: 0 $side-margin-mobile;
     padding: 2rem 0;
 
+    @include tablet {
+        margin: 0 $side-margin-tablet;
+    }
+
     @include desktop {
-        width: 60%;
+        width: $desktop-container-width;
+        margin: 0 auto;
     }
 
     &__title {
@@ -30,6 +36,7 @@
 
         @include desktop {
             padding: 1.5rem 0;
+            width: 60%;
             @include title-desktop;
         }
     }

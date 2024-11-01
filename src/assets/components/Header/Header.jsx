@@ -1,12 +1,18 @@
 import './Header.scss'
-import { MissionSection } from "../MissionSection/MissionSection";
+
 import { NavBar } from "../NavBar/NavBar";
+import { useState } from 'react'
 
 export function Header() {
+    const [filterPanel, setFilterPanel] = useState(false)
+
+    const toggleFilterPanel = () => {
+        setFilterPanel((previous) = !previous)
+    }
+
     return (
         <header className="header">
-            <NavBar />
-            <MissionSection />
+            <NavBar filterPanel={filterPanel} toggleFilterPanel={toggleFilterPanel} />
         </header>
     )
 }

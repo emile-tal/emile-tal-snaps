@@ -1,11 +1,12 @@
-import { FooterLinksColumn } from '../FooterLinksColumn/FooterLinksColumn'
-import { Wordmark } from '../Wordmark/Wordmark'
 import './Footer.scss'
+
+import { FooterLinksColumn } from '../FooterLinksColumn/FooterLinksColumn'
+import { FooterSocial } from '../FooterSocial/FooterSocial'
+import { Wordmark } from '../Wordmark/Wordmark'
 import facebookIcon from '../../Icons/Facebook.svg'
-import xIcon from '../../Icons/X_twitter.svg'
 import instagramIcon from '../../Icons/Instagram.svg'
 import pinterestIcon from '../../Icons/Pinterest.svg'
-import { FooterSocial } from '../FooterSocial/FooterSocial'
+import xIcon from '../../Icons/X_twitter.svg'
 
 export function Footer() {
     const footerLinksColumnArr1 = ['For photographers', 'Hire talent', 'Inspiration']
@@ -14,17 +15,15 @@ export function Footer() {
 
     return (
         <footer className="footer">
-            <div className="footer__desktop-container">
-                <div className='footer__tablet-container'>
-                    <div className='footer__wordmark-container'>
-                        <Wordmark />
-                    </div>
-                    <div className='footer__links-container'>
-                        <FooterLinksColumn links={footerLinksColumnArr1} />
-                        <FooterLinksColumn links={footerLinksColumnArr2} />
-                    </div>
+            <div className='footer__container'>
+                <div className='footer__wordmark-container'>
+                    <Wordmark />
                 </div>
-                <FooterSocial icons={footerSocialIconsObj} />
+                <div className='footer__links-container'>
+                    <FooterLinksColumn links={footerLinksColumnArr1} />
+                    <FooterLinksColumn links={footerLinksColumnArr2} />
+                    <FooterSocial icons={footerSocialIconsObj} />
+                </div>
             </div>
             <div className='footer__copyright-container'>
                 <p className='footer__copyright-text'>© 2024 Snaps</p>

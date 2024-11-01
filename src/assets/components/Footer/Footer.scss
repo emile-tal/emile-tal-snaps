@@ -14,33 +14,30 @@
         margin: 0 auto;
     }
 
-    &__desktop-container {
+    &__container {
+        position: relative;
+
+        @include tablet {
+            display: flex;
+            padding: 2rem 0 17rem;
+        }
+
         @include desktop {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-        }
-    }
-
-    &__tablet-container {
-        @include tablet {
-            display: flex;
-            padding: 1.5rem 0 14rem;
-        }
-
-        @include desktop {
             padding-bottom: 10rem;
         }
     }
 
     &__wordmark-container {
         @include tablet {
-            width: 50vw;
+            width: 50%;
         }
     }
 
     &__links-container {
-        padding: 1rem 0;
+        padding-top: 1rem;
 
         @include tablet {
             padding: 0;

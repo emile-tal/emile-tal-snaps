@@ -6,13 +6,18 @@
         display: flex;
         gap: 1.5rem;
         align-items: center;
+        padding-top: 1.4rem;
 
         @include tablet {
-            padding-bottom: 0.5rem;
+            position: absolute;
+            bottom: 0.7rem;
+            left: 0;
         }
 
         @include desktop {
-            padding-top: 1.5rem;
+            position: relative;
+            padding-top: 1rem;
+            align-items: flex-start;
         }
     }
 
