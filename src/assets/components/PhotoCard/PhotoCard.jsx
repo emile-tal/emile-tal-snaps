@@ -9,7 +9,7 @@ export function PhotoCard({ source, photographer, tags, alt }) {
             <img src={source} alt={alt} className="photo-card__image" />
             <div className="photo-card__tag-container">
                 {tags.map((tag, index) => (
-                    <Tag text={tag} key={index} />
+                    <Tag text={tag} key={index} clickable={false} />
                 ))}
             </div>
             <p className="photo-card__photographer">{photographer}</p>

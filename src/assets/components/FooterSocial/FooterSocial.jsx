@@ -5,8 +5,8 @@ export function FooterSocial({ icons }) {
     return (
         <div className='footer__socials-container'>
             {
-                icons.map((icon) => (
-                    <img src={icon.icon} alt={`${icon.company} icon`} className='footer__social-icon' />
+                icons.map((icon, index) => (
+                    <img key={index} src={icon.icon} alt={`${icon.company} icon`} className='footer__social-icon' />
                 ))
             }
         </div>

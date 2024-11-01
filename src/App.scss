@@ -1,5 +1,6 @@
 @use './styles/partials/variables.scss' as *;
 @use './styles/partials/global.scss' as *;
+@use './styles/partials/typography.scss' as *;
 
 .body {
     background-color: $primary-color3;

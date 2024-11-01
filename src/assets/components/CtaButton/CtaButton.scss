@@ -19,6 +19,22 @@
     &__text {
         @include labels-mobile;
         font-size: 0.75rem;
-        color: $primary-color2
+        color: $primary-color2;
+
+        &--selected {
+            color: $secondary-color3;
+        }
+    }
+
+    &__icon {
+        color: $primary-color2;
+
+        &--selected {
+            color: $secondary-color3;
+        }
+    }
+
+    &--selected {
+        background-color: $primary-color2;
     }
 }

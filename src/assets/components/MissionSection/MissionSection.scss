@@ -3,10 +3,11 @@
 
 .mission {
     margin: 0 $side-margin-mobile;
-    padding: 2rem 0;
+    padding: 1rem 0 1rem;
 
     @include tablet {
         margin: 0 $side-margin-tablet;
+        padding: 2rem 0;
     }
 
     @include desktop {

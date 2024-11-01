@@ -8,7 +8,7 @@ export function NavBar({ filterPanel, toggleFilterPanel }) {
         <>
             <nav className="navbar">
                 <Wordmark />
-                <CtaButton toggleFilterPanel={toggleFilterPanel} />
+                <CtaButton filterPanel={filterPanel} toggleFilterPanel={toggleFilterPanel} />
             </nav>
         </>
     )

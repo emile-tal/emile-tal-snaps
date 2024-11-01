@@ -10,5 +10,16 @@
 
     @include tablet {
         @include labels-desktop-tablet;
+        padding: 0.4rem 0.75rem;
+    }
+
+    &--clickable {
+        border: $primary-color2 solid 1px;
+        color: $primary-color2;
+        font-size: 0.7rem;
+
+        @include tablet {
+            font-size: 0.85rem;
+        }
     }
 }
