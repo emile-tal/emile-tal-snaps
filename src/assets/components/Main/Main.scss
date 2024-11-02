@@ -1,4 +1,34 @@
+@use '../../../styles/partials/variables.scss' as *;
+@use '../../../styles/partials/mixins.scss' as *;
+
 .main {
-    display: flex;
-    flex-direction: row-reverse;
+    @include desktop {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1.5rem;
+        width: $desktop-container-width;
+        margin: 0 auto;
+    }
+
+    &--filter-open {
+        @include desktop {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__content {
+        @include desktop {
+            width: $desktop-container-width;
+            margin: 0 auto;
+        }
+
+        &--filter-open {
+            @include desktop {
+                width: 52rem;
+                padding-left: 1.75rem;
+                margin: 0;
+            }
+        }
+    }
 }

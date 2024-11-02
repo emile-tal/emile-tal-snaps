@@ -9,6 +9,11 @@
         padding: 0.5rem $side-margin-tablet 5.5rem;
     }
 
+    @include desktop {
+        padding-left: 3rem;
+        width: 26.25rem;
+    }
+
     &__heading {
         @include heading-mobile;
         font-weight: 500;
@@ -19,6 +24,10 @@
             font-size: 1.5rem;
             padding: 1.5rem 0;
         }
+
+        @include desktop {
+            padding: 2.5rem 0;
+        }
     }
 
     &__container {
@@ -26,5 +35,9 @@
         flex-wrap: wrap;
         gap: 0.5rem;
         padding: 0.8rem 0;
+
+        @include desktop {
+            width: 21.75rem;
+        }
     }
 }
