@@ -1,7 +1,7 @@
 import './Tag.scss'
 
-export function Tag({ text, clickable }) {
+export function Tag({ text, clickable, handleClick }) {
     return (
-        <p className={`tag ${clickable && 'tag--clickable'}`}>{text}</p>
+        <p className={`tag ${clickable && 'tag--clickable'}`} onClick={handleClick} >{text}</p>
     )
 }

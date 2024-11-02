@@ -18,6 +18,10 @@
         color: $primary-color2;
         font-size: 0.7rem;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         @include tablet {
             font-size: 0.85rem;
         }
