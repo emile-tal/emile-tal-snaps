@@ -14,6 +14,15 @@
 
     &:hover {
         cursor: pointer;
+        background-color: $primary-color2;
+
+        & .cta-button__text {
+            color: $secondary-color3;
+        }
+
+        & .cta-button__icon {
+            color: $secondary-color3;
+        }
     }
 
     @include tablet {
