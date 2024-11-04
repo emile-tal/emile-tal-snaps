@@ -1,8 +1,10 @@
 import './App.scss'
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
 import { Footer } from './assets/components/Footer/Footer'
 import { Header } from './assets/components/Header/Header'
-import { Main } from './assets/components/Main/Main'
+import { HomePage } from './assets/pages/HomePage/HomePage'
 import { useState } from 'react'
 
 function App() {
@@ -13,11 +15,13 @@ function App() {
   }
 
   return (
-    <>
+    <BrowserRouter>
       <Header filterPanel={filterPanel} toggleFilterPanel={toggleFilterPanel} />
-      <Main filterPanel={filterPanel} toggleFilterPanel={toggleFilterPanel} />
+      <Routes>
+        <Route path='/' element={<HomePage filterPanel={filterPanel} toggleFilterPanel={toggleFilterPanel} />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
 
