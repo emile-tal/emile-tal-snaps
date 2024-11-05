@@ -1,7 +1,6 @@
 import './FooterSocial.scss'
 
 export function FooterSocial({ icons }) {
-    console.log(icons)
     return (
         <div className='footer__socials-container'>
             {

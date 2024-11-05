@@ -13,4 +13,8 @@
     @include desktop {
         padding: 2rem 0 2rem;
     }
+
+    &__wordmark {
+        text-decoration: none;
+    }
 }

@@ -8,8 +8,7 @@
 
     @include tablet {
         margin: 0 $side-margin-tablet;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         gap: 1.5rem;
         padding: 1rem 0;
     }

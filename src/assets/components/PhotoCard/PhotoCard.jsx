@@ -1,11 +1,12 @@
 import './PhotoCard.scss'
 
+import { Link } from 'react-router-dom'
 import { Tag } from '../Tag/Tag'
 
-export function PhotoCard({ source, photographer, tags, alt }) {
-    console.log(source)
+export function PhotoCard({ source, photographer, tags, alt, imageId }) {
+
     return (
-        <div className='photo-card'>
+        <Link to={`/image/${imageId}`} className='photo-card'>
             <img src={source} alt={alt} className="photo-card__image" />
             <div className="photo-card__tag-container">
                 {tags.map((tag, index) => (
@@ -13,6 +14,6 @@ export function PhotoCard({ source, photographer, tags, alt }) {
                 ))}
             </div>
             <p className="photo-card__photographer">{photographer}</p>
-        </div>
+        </Link>
     )
 }

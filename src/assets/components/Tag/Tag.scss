@@ -33,4 +33,13 @@
         background-color: $primary-color2;
         color: $secondary-color3;
     }
+
+    &--singleImage {
+        @include tablet {
+            @include body-desktop-tablet;
+            border: $secondary-color1 solid 2px;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+        }
+    }
 }
