@@ -3,6 +3,7 @@ import './GallerySection.scss'
 import { useEffect, useState } from 'react'
 
 import { PhotoCard } from '../PhotoCard/PhotoCard'
+import axios from 'axios'
 import photoArray from '../../../data/photos.json'
 
 export function GallerySection({ selectedFilter }) {

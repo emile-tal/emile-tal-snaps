@@ -17,7 +17,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header filterPanel={filterPanel} toggleFilterPanel={toggleFilterPanel} />
+      <Header filterPanel={filterPanel} toggleFilterPanel={toggleFilterPanel} setFilterPanel={setFilterPanel} />
       <Routes>
         <Route path='/' element={<HomePage filterPanel={filterPanel} toggleFilterPanel={toggleFilterPanel} />} />
         <Route path='/image/:imageId' element={<SingleImagePage />} />

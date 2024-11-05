@@ -1,0 +1,14 @@
+@use '../../../styles/partials/variables' as *;
+@use '../../../styles/partials/mixins' as *;
+
+.comments-container {
+    padding: 1rem 0;
+
+    &__count {
+        @include body-mobile;
+
+        @include tablet {
+            @include body-desktop-tablet;
+        }
+    }
+}

@@ -6,7 +6,7 @@ import { CtaButton } from '../CtaButton/CtaButton'
 import { HomeButton } from '../HomeButton/HomeButton'
 import { Wordmark } from '../Wordmark/Wordmark'
 
-export function NavBar({ filterPanel, toggleFilterPanel }) {
+export function NavBar({ filterPanel, toggleFilterPanel, setFilterPanel }) {
     const match = useMatch('/')
 
     return (
@@ -16,3 +16,6 @@ export function NavBar({ filterPanel, toggleFilterPanel }) {
         </nav>
     )
 }
+
+
+// setFilterPanel={setFilterPanel}
