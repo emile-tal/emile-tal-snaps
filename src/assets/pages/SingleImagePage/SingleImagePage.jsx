@@ -18,8 +18,6 @@ export function SingleImagePage() {
         try {
             const response = await axios.get(`${baseUrl}photos/${imageId}?api_key=${apiKey}`)
             setSingleImage(response.data)
-            console.log(`${baseUrl}photos/${imageId}?api_key=${apiKey}`)
-            console.log(response.data)
         } catch (error) {
             console.error(error)
         }

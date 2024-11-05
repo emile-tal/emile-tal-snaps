@@ -54,6 +54,8 @@
 
     &__like-container {
         padding-bottom: 0.5rem;
+        display: flex;
+        gap: 0.25rem;
 
         @include tablet {
             padding: 0;
