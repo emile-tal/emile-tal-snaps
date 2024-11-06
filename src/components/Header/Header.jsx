@@ -2,11 +2,11 @@ import './Header.scss'
 
 import { NavBar } from "../NavBar/NavBar";
 
-export function Header({ filterPanel, toggleFilterPanel, setFilterPanel }) {
+export function Header({ filterPanelOpen, toggleFilterPanel, closeFilterPanel }) {
 
     return (
         <header className="header">
-            <NavBar filterPanel={filterPanel} toggleFilterPanel={toggleFilterPanel} setFilterPanel={setFilterPanel} />
+            <NavBar filterPanelOpen={filterPanelOpen} toggleFilterPanel={toggleFilterPanel} closeFilterPanel />
         </header>
     )
 }

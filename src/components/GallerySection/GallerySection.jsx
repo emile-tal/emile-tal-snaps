@@ -26,15 +26,15 @@ export function GallerySection({ selectedFilter }) {
     }, [])
 
     useEffect(() => {
-        const filteredPhotoArray = imageArray.filter((photo) => selectedFilter ? photo.tags.includes(selectedFilter) : imageArray)
+        const filteredPhotoArray = selectedFilter ? imageArray.filter((photo) => photo.tags.includes(selectedFilter)) : imageArray
         setImageArray(filteredPhotoArray)
     }, [selectedFilter])
 
     return (
-        <section className='gallery'>
+        <div className='gallery'>
             {imageArray.map(photoObj => (
                 <PhotoCard key={photoObj.id} imageId={photoObj.id} source={photoObj.photo} photographer={photoObj.photographer} tags={photoObj.tags} alt={photoObj.photoDescription} />
             ))}
-        </section>
+        </div>
     )
 }

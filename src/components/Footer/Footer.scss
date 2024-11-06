@@ -32,7 +32,8 @@
 
     &__wordmark-container {
         @include tablet {
-            width: 50%;
+            width: calc(50% - 0.75rem);
+            margin-right: 1.5rem;
         }
     }
 

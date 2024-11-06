@@ -6,16 +6,13 @@ import { CtaButton } from '../CtaButton/CtaButton'
 import { HomeButton } from '../HomeButton/HomeButton'
 import { Wordmark } from '../Wordmark/Wordmark'
 
-export function NavBar({ filterPanel, toggleFilterPanel, setFilterPanel }) {
+export function NavBar({ filterPanelOpen, toggleFilterPanel, closeFilterPanel }) {
     const match = useMatch('/')
 
     return (
         <nav className="navbar">
             <Link to='/' className='navbar__wordmark'><Wordmark /></Link>
-            {match ? <CtaButton filterPanel={filterPanel} toggleFilterPanel={toggleFilterPanel} /> : <HomeButton />}
+            {match ? <CtaButton filterPanelOpen={filterPanelOpen} toggleFilterPanel={toggleFilterPanel} /> : <HomeButton closeFilterPanel={closeFilterPanel} />}
         </nav>
     )
 }
-
-
-// setFilterPanel={setFilterPanel}

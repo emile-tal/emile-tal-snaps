@@ -19,7 +19,7 @@ export function SinglePhotoCard({ photo }) {
                     <img src={likeIcon} alt='Like icon' className='single-photo-card__like-icon' />
                     <p className='single-photo-card__text'>{`${photo.likes} likes`}</p>
                 </div>
-                <p className='single-photo-card__text'>{`Photo by ${photo.photographer}`}</p>
+                <p className='single-photo-card__text'>Photo by&nbsp;&nbsp;&nbsp;{photo.photographer}</p>
                 <p className='single-photo-card__text single-photo-card__text--displaced'>{date.toLocaleDateString()}</p>
             </div>
         </div>

@@ -29,7 +29,7 @@ export function FilterPanel({ selectedFilter, setSelectedFilter }) {
             <h2 className='filter-panel__heading'>Filters</h2>
             <div className='filter-panel__container'>
                 {tags.map((tag, index) => (
-                    <Tag key={index} text={tag} clickable={true} handleClick={() => setSelectedFilter(selectedFilter === tag ? null : tag)} selected={selectedFilter === tag} />
+                    <Tag key={index} text={tag} clickable handleClick={() => setSelectedFilter(selectedFilter === tag ? null : tag)} selected={selectedFilter === tag} />
                 ))}
             </div>
         </nav>

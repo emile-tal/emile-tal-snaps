@@ -1,0 +1,44 @@
+@use '../../styles/partials/variables.scss' as *;
+@use '../../styles/partials/mixins.scss' as *;
+
+.not-found-page {
+    margin: 0 $side-margin-mobile 10rem;
+
+    @include tablet {
+        margin: 0 $side-margin-tablet 8rem;
+    }
+
+    @include desktop {
+        width: $desktop-container-width;
+        margin: 0 auto 8rem;
+    }
+
+    &__header {
+        padding: 2rem 0;
+        @include title-mobile;
+
+        @include tablet {
+            @include title-tablet;
+        }
+
+        @include desktop {
+            @include title-desktop;
+        }
+    }
+
+    &__link {
+        @include body-mobile;
+        color: $primary-color2;
+        text-decoration: none;
+
+        @include tablet {
+            @include body-desktop-tablet;
+            color: $primary-color2;
+        }
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
