@@ -4,6 +4,11 @@
 .comments-container {
     padding: 1rem 0;
 
+    @include tablet {
+        margin: 0 auto;
+        max-width: 50rem;
+    }
+
     &__count {
         @include body-mobile;
 

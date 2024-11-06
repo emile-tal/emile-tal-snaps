@@ -43,7 +43,7 @@ export function SingleImagePage() {
     return (
         <main className='single-image-page'>
             {singleImage && <SinglePhotoCard photo={singleImage} />}
-            <CommentForm />
+            <CommentForm imageId={imageId} getComments={getComments} />
             {comments && <CommentsContainer comments={comments} />}
         </main>
     )
