@@ -1,0 +1,61 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.photo-card {
+    width: 100%;
+    background-color: $secondary-color2;
+    border: $secondary-color1 1px solid;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 8px;
+    text-decoration: none;
+
+    @include tablet {
+        width: calc(50% - 0.75rem);
+        margin: 0;
+        border-radius: 16px;
+    }
+
+    @include desktop {
+        width: 24.5rem;
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+
+        @include tablet {
+            border-radius: 16px 16px 0 0;
+        }
+    }
+
+    &__tag-container {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.4rem;
+
+        @include tablet {
+            padding: 0.8rem;
+        }
+    }
+
+    &__photographer {
+        @include labels-mobile;
+        position: absolute;
+        right: 0;
+        bottom: 2.5rem;
+        background-color: $secondary-color2;
+        padding: 0.3rem 0.5rem;
+        border-top-left-radius: 8px;
+
+        @include tablet {
+            @include labels-desktop-tablet;
+            bottom: 3.6rem;
+        }
+
+        @include desktop {
+            border-top-left-radius: 16px;
+            padding: 0.5rem 0.7rem;
+        }
+    }
+}

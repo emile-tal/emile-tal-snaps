@@ -1,0 +1,53 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.cta-button {
+    background-color: transparent;
+    color: $primary-color2;
+    border: 2px solid $primary-color2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 1rem;
+    border-radius: 100vmax;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $primary-color2;
+
+        & .cta-button__text {
+            color: $secondary-color3;
+        }
+
+        & .cta-button__icon {
+            color: $secondary-color3;
+        }
+    }
+
+    @include tablet {
+        padding: 0.5rem 1.75rem;
+    }
+
+    &__text {
+        @include labels-mobile;
+        font-size: 0.75rem;
+        color: $primary-color2;
+
+        &--selected {
+            color: $secondary-color3;
+        }
+    }
+
+    &__icon {
+        color: $primary-color2;
+
+        &--selected {
+            color: $secondary-color3;
+        }
+    }
+
+    &--selected {
+        background-color: $primary-color2;
+    }
+}

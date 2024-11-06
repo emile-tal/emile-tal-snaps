@@ -1,0 +1,9 @@
+@use '../../styles/partials/mixins.scss' as *;
+
+.wordmark {
+    @include wordmark-mobile;
+
+    @include tablet {
+        @include wordmark-desktop-tablet;
+    }
+}

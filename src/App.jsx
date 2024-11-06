@@ -2,10 +2,10 @@ import './App.scss'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { Footer } from './assets/components/Footer/Footer'
-import { Header } from './assets/components/Header/Header'
-import { HomePage } from './assets/pages/HomePage/HomePage'
-import { SingleImagePage } from './assets/pages/SingleImagePage/SingleImagePage'
+import { Footer } from './components/Footer/Footer'
+import { Header } from './components/Header/Header'
+import { HomePage } from './pages/HomePage/HomePage'
+import { SingleImagePage } from './pages/SingleImagePage/SingleImagePage'
 import { useState } from 'react'
 
 function App() {

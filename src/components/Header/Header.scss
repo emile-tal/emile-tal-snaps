@@ -1,0 +1,15 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header {
+    margin: 0 $side-margin-mobile;
+
+    @include tablet {
+        margin: 0 $side-margin-tablet;
+    }
+
+    @include desktop {
+        width: $desktop-container-width;
+        margin: 0 auto;
+    }
+}

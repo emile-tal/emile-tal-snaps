@@ -1,0 +1,85 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.footer {
+    margin: 0 $side-margin-mobile;
+    padding: 3.5rem 0 0;
+
+    @include tablet {
+        margin: 0 $side-margin-tablet;
+    }
+
+    @include desktop {
+        width: $desktop-container-width;
+        margin: 0 auto;
+    }
+
+    &__container {
+        position: relative;
+
+        @include tablet {
+            display: flex;
+            padding: 2rem 0 17rem;
+        }
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 10rem;
+        }
+    }
+
+    &__wordmark-container {
+        @include tablet {
+            width: 50%;
+        }
+    }
+
+    &__links-container {
+        padding-top: 1rem;
+
+        @include tablet {
+            padding: 0;
+            display: flex;
+            gap: 4rem;
+        }
+    }
+
+    &__links-column {
+        padding: 0.4rem 0 0;
+
+        @include tablet {
+            padding: 0;
+        }
+    }
+
+    &__link {
+        padding: 0.25rem 0;
+        @include body-mobile;
+
+        @include tablet {
+            @include body-desktop-tablet;
+        }
+    }
+
+    &__copyright-container {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1rem 0;
+
+        @include tablet {
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__copyright-text {
+        @include body-mobile;
+        color: $secondary-color1;
+
+        @include tablet {
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+    }
+}
