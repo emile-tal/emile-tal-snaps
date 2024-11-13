@@ -3,8 +3,8 @@ import './App.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import { Footer } from './components/Footer/Footer'
-import { Header } from './components/Header/Header'
 import { HomePage } from './pages/HomePage/HomePage'
+import { NavBar } from './components/NavBar/NavBar'
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage'
 import { SingleImagePage } from './pages/SingleImagePage/SingleImagePage'
 import { useState } from 'react'
@@ -18,13 +18,13 @@ function App() {
 
   const closeFilterPanel = () => {
     setFilterPanelOpen(false)
-  }
+  } //remove this function from everywhere and make it so that homepage opens this happens
 
   return (
     <BrowserRouter>
-      <Header filterPanelOpen={filterPanelOpen} toggleFilterPanel={toggleFilterPanel} closeFilterPanel={closeFilterPanel} />
+      <NavBar filterPanelOpen={filterPanelOpen} toggleFilterPanel={toggleFilterPanel} />
       <Routes>
-        <Route path='/' element={<HomePage filterPanelOpen={filterPanelOpen} toggleFilterPanel={toggleFilterPanel} />} />
+        <Route path='/' element={<HomePage filterPanelOpen={filterPanelOpen} toggleFilterPanel={toggleFilterPanel} closeFilterPanel={closeFilterPanel} />} />
         <Route path='/image/:imageId' element={<SingleImagePage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

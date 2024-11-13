@@ -7,6 +7,7 @@ import axios from 'axios'
 
 export function GallerySection({ selectedFilter }) {
     const [imageArray, setImageArray] = useState([])
+    const [imageData, setImageData] = useState([])
 
     // Fetching data from API:
     const baseUrl = 'https://unit-3-project-c5faaab51857.herokuapp.com/'
@@ -15,6 +16,7 @@ export function GallerySection({ selectedFilter }) {
     const getImages = async () => {
         try {
             const { data } = await axios.get(`${baseUrl}photos?api_key=${apiKey}`)
+            setImageData(data)
             setImageArray(data)
         } catch (error) {
             console.error(error)
@@ -26,7 +28,7 @@ export function GallerySection({ selectedFilter }) {
     }, [])
 
     useEffect(() => {
-        const filteredPhotoArray = selectedFilter ? imageArray.filter((photo) => photo.tags.includes(selectedFilter)) : imageArray
+        const filteredPhotoArray = selectedFilter ? imageData.filter((photo) => photo.tags.includes(selectedFilter)) : imageData
         setImageArray(filteredPhotoArray)
     }, [selectedFilter])
 

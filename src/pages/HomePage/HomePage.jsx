@@ -1,12 +1,17 @@
 import './HomePage.scss'
 
+import { useEffect, useState } from 'react';
+
 import { FilterPanel } from "../../components/FilterPanel/FilterPanel";
 import { GallerySection } from "../../components/GallerySection/GallerySection";
 import { MissionSection } from "../../components/MissionSection/MissionSection";
-import { useState } from 'react';
 
-export function HomePage({ filterPanelOpen, toggleFilterPanel }) {
+export function HomePage({ filterPanelOpen, toggleFilterPanel, closeFilterPanel }) {
     const [selectedFilter, setSelectedFilter] = useState(null)
+
+    useEffect(() => {
+        closeFilterPanel()
+    }, [])
 
     return (
         <main className={`home ${filterPanelOpen && 'home--filter-open'}`}>
