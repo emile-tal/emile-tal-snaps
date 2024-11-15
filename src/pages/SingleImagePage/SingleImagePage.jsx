@@ -13,13 +13,11 @@ export function SingleImagePage() {
     const [singleImage, setSingleImage] = useState(null)
     const [comments, setComments] = useState([])
 
-    // Fetching data from API:
-    const baseUrl = 'https://unit-3-project-c5faaab51857.herokuapp.com/'
-    const apiKey = '3ad59781-bca8-4c49-97df-4e9a69cdc9a7'
+    const baseUrl = import.meta.env.VITE_API_URL
 
     const getImage = async () => {
         try {
-            const response = await axios.get(`${baseUrl}photos/${imageId}?api_key=${apiKey}`)
+            const response = await axios.get(`${baseUrl}photos/${imageId}`)
             setSingleImage(response.data)
         } catch (error) {
             console.error(error)
@@ -28,7 +26,7 @@ export function SingleImagePage() {
 
     const getComments = async () => {
         try {
-            const response = await axios.get(`${baseUrl}photos/${imageId}/comments?api_key=${apiKey}`)
+            const response = await axios.get(`${baseUrl}photos/${imageId}/comments`)
             setComments(response.data)
         } catch (error) {
             console.error(error)

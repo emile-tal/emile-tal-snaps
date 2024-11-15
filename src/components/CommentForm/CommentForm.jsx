@@ -9,8 +9,7 @@ export function CommentForm({ imageId, getComments }) {
     const [styleInvalidName, setStyleInvalidName] = useState(false)
     const [styleInvalidComment, setStyleInvalidComment] = useState(false)
 
-    const baseUrl = 'https://unit-3-project-c5faaab51857.herokuapp.com/'
-    const apiKey = '3ad59781-bca8-4c49-97df-4e9a69cdc9a7'
+    const baseUrl = import.meta.env.VITE_API_URL
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -57,7 +56,7 @@ export function CommentForm({ imageId, getComments }) {
     }
 
     const putComment = async (newComment) => {
-        await axios.post(`${baseUrl}photos/${imageId}/comments?api_key=${apiKey}`, newComment)
+        await axios.post(`${baseUrl}photos/${imageId}/comments`, newComment)
         getComments()
     }
 

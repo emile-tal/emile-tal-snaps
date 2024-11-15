@@ -57,6 +57,7 @@
     &__like-container {
         padding-bottom: 0.5rem;
         display: flex;
+        align-items: center;
         gap: 0.4rem;
 
         @include tablet {

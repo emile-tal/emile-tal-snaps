@@ -7,12 +7,11 @@ import axios from 'axios'
 
 export function FilterPanel({ selectedFilter, setSelectedFilter }) {
     const [tags, setTags] = useState([])
-    const baseUrl = 'https://unit-3-project-c5faaab51857.herokuapp.com/'
-    const apiKey = '3ad59781-bca8-4c49-97df-4e9a69cdc9a7'
+    const baseUrl = import.meta.env.VITE_API_URL
 
     const getTags = async () => {
         try {
-            const { data } = await axios.get(`${baseUrl}tags?api_key=${apiKey}`)
+            const { data } = await axios.get(`${baseUrl}tags`)
             setTags(data)
         } catch (error) {
             console.error(error)

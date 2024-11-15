@@ -6,18 +6,15 @@ import { PhotoCard } from '../PhotoCard/PhotoCard'
 import axios from 'axios'
 
 export function GallerySection({ selectedFilter }) {
-    const [imageArray, setImageArray] = useState([])
     const [imageData, setImageData] = useState([])
 
     // Fetching data from API:
-    const baseUrl = 'https://unit-3-project-c5faaab51857.herokuapp.com/'
-    const apiKey = '3ad59781-bca8-4c49-97df-4e9a69cdc9a7'
+    const baseUrl = import.meta.env.VITE_API_URL
 
     const getImages = async () => {
         try {
-            const { data } = await axios.get(`${baseUrl}photos?api_key=${apiKey}`)
+            const { data } = await axios.get(`${baseUrl}photos`)
             setImageData(data)
-            setImageArray(data)
         } catch (error) {
             console.error(error)
         }
@@ -27,14 +24,11 @@ export function GallerySection({ selectedFilter }) {
         getImages()
     }, [])
 
-    useEffect(() => {
-        const filteredPhotoArray = selectedFilter ? imageData.filter((photo) => photo.tags.includes(selectedFilter)) : imageData
-        setImageArray(filteredPhotoArray)
-    }, [selectedFilter])
+    const filteredPhotoArray = selectedFilter ? imageData.filter((photo) => photo.tags.includes(selectedFilter)) : imageData
 
     return (
         <div className='gallery'>
-            {imageArray.map(photoObj => (
+            {filteredPhotoArray.map(photoObj => (
                 <PhotoCard key={photoObj.id} imageId={photoObj.id} source={photoObj.photo} photographer={photoObj.photographer} tags={photoObj.tags} alt={photoObj.photoDescription} />
             ))}
         </div>

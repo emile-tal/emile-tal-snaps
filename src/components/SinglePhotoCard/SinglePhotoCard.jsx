@@ -6,9 +6,11 @@ import likeIcon from '../../assets/images/Like_Outline.svg'
 export function SinglePhotoCard({ photo }) {
     const date = new Date(photo.timestamp)
 
+    const baseUrl = import.meta.env.VITE_API_URL
+
     return (
         <div className='single-photo-card'>
-            <img src={photo.photo} alt={photo.photoDescription} className='single-photo-card__image' />
+            <img src={`${baseUrl}${photo.photo}`} alt={photo.photoDescription} className='single-photo-card__image' />
             <div className='single-photo-card__tag-container'>
                 {photo.tags.map((tag, index) => (
                     <Tag key={index} text={tag} clickable={false} singleImage={true} />
